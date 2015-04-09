@@ -15,9 +15,14 @@ You need to include the libraries and init the plugin.
 <script src="db.js"></script>
 <script src="jquery.templateLouder.js"></script>
 
-<div id="templetaPlaceDiv" data-template-src="/puth/to/html"></div>
+<div id="templatePlaceDiv" data-template-src="/puth/to/html"></div>
 
 <script>
-    $('#templetaPlaceDiv).templateLouder();
+    $('#templatePlaceDiv).templateLouder();
 </sctipt>
+```
+or attach on all divs
+
+```
+ $('[data-template-src]').templateLouder();
 ```
