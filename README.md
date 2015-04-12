@@ -1,4 +1,4 @@
-# jQueryTemplateLouderPlugin
+# jQueryTemplateLoaderPlugin
 jQuery plugin for ajax rendering html on appear block with indexDB caching
 ### Version
 1.0.0
@@ -75,7 +75,7 @@ each refreshable template will be deleted from IndexBD and loaded by ajax reques
 request on first appear on page.
 
 > **cacheTime** - default null, the time in milliseconds of caching templates. After expire on appear, load, click or hover the template will be refreshed
- with ajax request and new set to indexDB.
+ with ajax request and new set html data to indexDB as new cache.
   
 > **sourceTemplateAttribute** - default 'data-template-src', the attribute of link to html into template place.
 
