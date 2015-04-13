@@ -1,4 +1,4 @@
-# jQueryTemplateLouderPlugin
+#jQueryTemplateLoader
 jQuery plugin for ajax rendering html on appear block with indexDB caching
 ### Version
 1.0.0
@@ -15,32 +15,32 @@ You need to include the libraries and init the plugin.
 <script src="jquery.js"></script>
 <script src="jquery.appear.js"></script>
 <script src="db.js"></script>
-<script src="jquery.templateLouder.js"></script>
+<script src="jquery.templateLoader.js"></script>
 
 <div id="templatePlaceDiv" data-template-src="/puth/to/html"></div>
 
 <script>
-    $('#templatePlaceDiv).templateLouder();
-</sctipt>
+    $('#templatePlaceDiv').templateLoader();
+</script>
 ```
 or attach on all divs
 
 ```javascript
- $('[data-template-src]').templateLouder(); 
+ $('[data-template-src]').templateLoader(); 
 ```
 
 Also you can disable caching (by IndexDB), or enable dev mode with messages.
  
 ```javascript
- $('[data-template-src]').templateLouder({
+ $('[data-template-src]').templateLoader({
              debugMode: true,
              caching: false
          });         
 ```
 
-For refreshing template place need to save [templateLouder] object
+For refreshing template place need to save [templateLoader] object
 ```javascript
-        var templateLouder = $('[data-template-src]').templateLouder({
+        var templateLoader = $('[data-template-src]').templateLoader({
                                           cacheTime: 100000, // 1 second =  1000 milliseconds (if need)
                                           templateRenderCallback: function(tamplate){
                                                 console.log(template);
@@ -49,20 +49,20 @@ For refreshing template place need to save [templateLouder] object
                                       
         //refresh all         
          $("#buttonRfreshAll").on("click",function(){
-               templateLouder.refresh();
+               templateLoader.refresh();
          }
          
          //refresh some selected templates
          $("#buttonRfreshSomeTemplates").on("click",function(){
                         var someTemplates = $("#template1, .refreshableTemplates");
-                        templateLouder.refresh(someTemplates);
+                        templateLoader.refresh(someTemplates);
                   }
                   
          //clear all current database
-           templateLouder.clearDatabase();
+           templateLoader.clearDatabase();
                   
          //delete one item from data base
-           templateLouder.deleteItemDatabase('puth/to/html/source');        
+           templateLoader.deleteItemDatabase('puth/to/html/source');        
 ```
 each refreshable template will be deleted from IndexBD and loaded by ajax request on appear.
 
