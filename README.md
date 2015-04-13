@@ -1,4 +1,4 @@
-# jQueryTemplateLoaderPlugin
+# jQueryTemplateLouderPlugin
 jQuery plugin for ajax rendering html on appear block with indexDB caching
 ### Version
 1.0.0
