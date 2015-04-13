@@ -57,6 +57,12 @@ For refreshing template place need to save [templateLouder] object
                         var someTemplates = $("#template1, .refreshableTemplates");
                         templateLouder.refresh(someTemplates);
                   }
+                  
+         //clear all current database
+           templateLouder.clearDatabase();
+                  
+         //delete one item from data base
+           templateLouder.deleteItemDatabase('puth/to/html/source');        
 ```
 each refreshable template will be deleted from IndexBD and loaded by ajax request on appear.
 
