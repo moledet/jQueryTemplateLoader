@@ -9,7 +9,7 @@
  *      jQuery appear plugin https://github.com/morr/jquery.appear/
  *      db.js is a wrapper for IndexedDB https://github.com/aaronpowell/db.js
  */
-(function($) {
+;(function($) {
     function jQueryTemplateLoaderObj(params){
         var TemplateLoader = {
             Database: null,
