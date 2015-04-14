@@ -34,6 +34,11 @@
                     this.isRenderedAttribute = 'data-is-rendered-from-sourceTemplateAttribute-'+TemplateLoader.sourceTemplateAttribute;
                 }
 
+                this.databaseVersion = parseInt(this.databaseVersion);
+                if(this.databaseVersion == NaN){
+                    this.databaseVersion = 1;
+                }
+
                 if (this.caching) {
                     TemplateLoader.initDatabase();
                 }else{
